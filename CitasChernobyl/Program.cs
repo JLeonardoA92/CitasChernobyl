@@ -10,7 +10,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(option => {
         option.LoginPath = "/Acceso/Index";
         option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-        option.AccessDeniedPath = "/Home/Privacy";
+        option.AccessDeniedPath = "/SesionFinalizada/SesionFinalizada";
     });
 
 var app = builder.Build();
