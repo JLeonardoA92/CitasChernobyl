@@ -1,0 +1,131 @@
+// Global vars colors
+$colorwt: #fff;
+$colorG1: #14D9E5;
+$colorG1: #23DDCD;
+$colorG2: #9DFE00;
+$colorN1: #FEC200;
+$colorBlk1: #191D29;
+
+
+
+/////import font 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    background: url(../image/bg1.jpg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    background-color: transparent !important;
+    border: 0 !important;
+    
+}
+
+.logo{
+    &:hover{
+        animation: glitchy 0.4s ease 0.4s infinite;
+    }
+}
+
+/////nav
+/// 
+.btnA{
+    border-radius: 20px;
+    padding: 0.4rem 2rem !important;
+    background: rgb(157,254,0);
+    background: linear-gradient(35deg, rgba(157,254,0,1) 0%, rgba(20,217,229,1) 100%);
+    margin-right: 7px;
+    font-weight: 800;
+    border: none;
+    color: $colorBlk1 !important;
+    &:hover{
+        animation: glitchy 0.3s ease 0.3s infinite;
+    }
+     
+}
+
+.btnB{
+    border-radius: 20px;
+    padding: 0.4rem 2rem !important;
+    border: 1px solid;
+    border-color: rgb(157,254,0);
+    font-weight: 800;
+    color: $colorwt !important;
+    &:hover{
+        animation: glitchy 0.3s ease 0.3s infinite;
+    }
+}
+
+.navbar-brand{
+    width: 120px;
+    padding: 1rem;
+}
+
+.boxTitular{
+    position: relative;
+    & .gota{
+        position: absolute;
+        left: -35px;
+        animation: springIn 2.3s ease-in-out infinite;
+    }
+    & .avatar{
+        position: absolute;
+        right: -35px;
+        width: 240px;
+        top: 40px;
+        animation: springIn 1.3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+    }
+}
+
+//////items
+.boxContIntem{
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    & .boxItem{
+        max-width: 50vw;
+        position: relative;
+        opacity: 0;
+        top: 30px;
+        & img{
+            height: 20vw;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    & .boxItemShape{
+        position: absolute;
+        width: 100%;
+        height: 30vh;
+        bottom: 0;
+        border-radius: 22px;
+        background: rgb(157,254,0);
+        background: linear-gradient(35deg, rgba(157,254,0,1) 0%, rgba(20,217,229,1) 100%);
+    }
+}
+///////animations
+
+@keyframes springIn {
+    from, to {
+		transform: translateY(5vh);
+	}
+	80% {
+		transform: translateY(2vh);
+	}
+}
+
+@keyframes glitchy {
+    0%   {transform: translate(-2px, 2px);}
+    25%  {transform: translate(-2px, -2px);}
+    50%  {transform: translate(2px, 2px);}
+    75%  {transform: translate(2px, -2px);}
+    100%  {transform: translate(-2px, 2px);}
+}

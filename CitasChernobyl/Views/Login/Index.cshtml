@@ -15,13 +15,14 @@
     <title>@ViewData["Title"] Chernobyl BarberShop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CitasChernobyl.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index">Chernobyl BarberShop</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index"><img src="../image/logo1.png" class="img-fluid logo" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,10 +30,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1 justify-content-end">
                         <li class="nav-item">
-                            <a alingn="right" class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="Index">Registrate</a>
+                            <a alingn="right" class="nav-link btnA" asp-area="" asp-controller="Registro" asp-action="Index">Registrate</a>
                         </li>
                         <li class="nav-item">
-                            <a alingn="right" class="nav-link text-dark" asp-area="" asp-controller="Acceso" asp-action="Index">Iniciar Sesión</a>
+                            <a alingn="right" class="nav-link btnB" asp-area="" asp-controller="Acceso" asp-action="Index">Iniciar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -41,10 +42,54 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                       <div class="boxTitular">
+                        <img src="../image/gota.png" class="img-fluid gota" alt="">
+                        <img src="../image/titularIndex.png" class="img-fluid" alt="">
+                        <img src="../image/1.png" class="img-fluid avatar" alt="">
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto">
+                        <ul class="boxContIntem">
+                            <li>
+                                <div class="boxItem">
+                                    <figure>
+                                        <img src="../image/men1.png" class="imgMen" alt="">
+                                    </figure>
+                                    <div class="boxItemShape"></div>
+                                </div>
+                            </li>
+                             <li>
+                                <div class="boxItem">
+                                    <figure>
+                                        <img src="../image/men2.png" class="imgMen" alt="">
+                                    </figure>
+                                    <div class="boxItemShape"></div>
+                                </div>
+                            </li>
+                             <li>
+                                <div class="boxItem">
+                                    <figure>
+                                        <img src="../image/men3.png" class="imgMen" alt="">
+                                    </figure>
+                                    <div class="boxItemShape"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/gsap/gsap.min.js" asp-append-version="true"></script>
 </body>
 </html>

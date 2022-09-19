@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  background: url(../image/bg1.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+.logo:hover {
+  -webkit-animation: glitchy 0.4s ease 0.4s infinite;
+          animation: glitchy 0.4s ease 0.4s infinite;
+}
+
+.btnA {
+  border-radius: 20px;
+  padding: 0.4rem 2rem !important;
+  background: rgb(157, 254, 0);
+  background: linear-gradient(35deg, rgb(157, 254, 0) 0%, rgb(20, 217, 229) 100%);
+  margin-right: 7px;
+  font-weight: 800;
+  border: none;
+  color: #191D29 !important;
+}
+.btnA:hover {
+  -webkit-animation: glitchy 0.3s ease 0.3s infinite;
+          animation: glitchy 0.3s ease 0.3s infinite;
+}
+
+.btnB {
+  border-radius: 20px;
+  padding: 0.4rem 2rem !important;
+  border: 1px solid;
+  border-color: rgb(157, 254, 0);
+  font-weight: 800;
+  color: #fff !important;
+}
+.btnB:hover {
+  -webkit-animation: glitchy 0.3s ease 0.3s infinite;
+          animation: glitchy 0.3s ease 0.3s infinite;
+}
+
+.navbar-brand {
+  width: 120px;
+  padding: 1rem;
+}
+
+.boxTitular {
+  position: relative;
+}
+.boxTitular .gota {
+  position: absolute;
+  left: -35px;
+  -webkit-animation: springIn 2.3s ease-in-out infinite;
+          animation: springIn 2.3s ease-in-out infinite;
+}
+.boxTitular .avatar {
+  position: absolute;
+  right: -35px;
+  width: 240px;
+  top: 40px;
+  -webkit-animation: springIn 1.3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+          animation: springIn 1.3s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+.boxContIntem {
+  padding: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 20px;
+}
+.boxContIntem .boxItem {
+  max-width: 50vw;
+  position: relative;
+  opacity: 0;
+  top: 30px;
+}
+.boxContIntem .boxItem img {
+  height: 20vw;
+  position: relative;
+  z-index: 2;
+}
+.boxContIntem .boxItemShape {
+  position: absolute;
+  width: 100%;
+  height: 30vh;
+  bottom: 0;
+  border-radius: 22px;
+  background: rgb(157, 254, 0);
+  background: linear-gradient(35deg, rgb(157, 254, 0) 0%, rgb(20, 217, 229) 100%);
+}
+
+@-webkit-keyframes springIn {
+  from, to {
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+  80% {
+    -webkit-transform: translateY(2vh);
+            transform: translateY(2vh);
+  }
+}
+
+@keyframes springIn {
+  from, to {
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+  80% {
+    -webkit-transform: translateY(2vh);
+            transform: translateY(2vh);
+  }
+}
+@-webkit-keyframes glitchy {
+  0% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  75% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+}
+@keyframes glitchy {
+  0% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  75% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+}

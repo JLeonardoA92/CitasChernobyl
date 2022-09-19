@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,24 +14,26 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CitasChernobyl.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/global.css" asp-append-version="true" />
 
 </head>
+
 <body>
-    <header>
+      <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index">Chernobyl BarberShop</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Login" asp-action="Index"><img src="../image/logo1.png" class="img-fluid logo" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div alingn="right" class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1 justify-content-end">
                         <li class="nav-item">
-                            <a alingn="right" class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="Index">Registrate</a>
+                            <a alingn="right" class="nav-link btnA" asp-area="" asp-controller="Registro" asp-action="Index">Registrate</a>
                         </li>
                         <li class="nav-item">
-                            <a alingn="right" class="nav-link text-dark" asp-area="" asp-controller="Acceso" asp-action="Index">Iniciar Sesión</a>
+                            <a alingn="right" class="nav-link btnB" asp-area="" asp-controller="Acceso" asp-action="Index">Iniciar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -39,26 +42,21 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-        </main>
-    </div>
+            <div class="text-center">
+                <img src="../image/titularIndex.png" class="img-fluid" style="width:300px ;" alt="">
 
-    <div class="text-center">
-        <h1 class="display-4">Chernobyl BarberShop</h1>
-
-    </div>
-    <div class="row mt-5">
-        <div class = "col-sm-4 offset-sm-4">
+            </div>
+            <div class="row mt-5">
+        <div class="col-md-5 mx-auto">
             <form asp-controller="Acceso" asp-action="Index" method="post">
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input type="email" class="form-control" asp-for="Correo">
-                    <label class="form-label" for="form2Example1">Email</label>
+                    <input type="email" class="form-control" asp-for="Correo" placeholder="Email"> 
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                    <input type="password" class="form-control" asp-for="Clave">
-                    <label class="form-label" for="form2Example2">Contraseña</label>
+                    <input type="password" class="form-control" asp-for="Clave" placeholder="Contraseña"> 
                 </div>
 
                 <!-- 2 column grid layout for inline styling -->
@@ -75,19 +73,30 @@
                         <!-- Simple link -->
                         <a href="#!">Olvido su Contraseña?</a>
                     </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4 mx-auto btnA">Iniciar Sesión</button>
+                    </div>
                 </div>
 
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">Iniciar Sesión</button>
+                
 
             </form>
         </div>
 
-   </div>
+    </div>
+        </main>
+    </div>
+    
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/gsap/gsap.min.js" asp-append-version="true"></script>
 
 </body>
+
 </html>
