@@ -55,11 +55,16 @@ namespace CitasChernobyl.Controllers
         {
             return View();
         }
+
+       
+
         [Authorize(Roles = "Empleado")]
         public IActionResult Consultar_Agenda()
         {
             return View();
         }
+
+       
 
         public IActionResult Salir()
         {

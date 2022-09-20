@@ -4,5 +4,49 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Clientes</h1>
+<div class="boxDashboard p-4">
+
+    @* fila 2 *@
+    <div class="row justify-content-between  mt-3">
+
+        <div class="col-md-12 d-flex align-items-stretch">
+            <div class="card p-4 w-100">
+                <h2 class="tituloCard">Listado de
+                    <strong>Clientes</strong>
+                </h2>
+                <hr>
+                <div class="listProgram">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Fecha ingreso</th>
+                                <th scope="col">Número de servicios</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td> Juan Carlos Torres</td>
+                                <td><span><i class="bi bi-calendar3"></i> </span> Lunes 21 Febrero</td>
+                                <td><span><i class="bi bi-ticket-perforated-fill"></i></span> 30 servicios</td>
+                                <td> <span class="activo"><i class="bi bi-check-square-fill"></i> Activo</span></td>
+                                
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+
+    </div>
+    @* fin fila 2 *@
+</div>
 

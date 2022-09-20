@@ -4,5 +4,79 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Consultar Agenda</h1>
+
+<div class="boxDashboard p-4">
+    @* fila 1 *@
+     <div class="row justify-content-between  mt-3">
+
+        <div class="col-md-12 d-flex align-items-stretch">
+            <div class="card p-4 w-100">
+                <h2 class="tituloCard"><i class="bi bi-calendar3"></i> Consultar
+                    <strong>Agenda</strong>
+                </h2>
+            </div>
+        </div>
+    </div>
+   
+
+    @* final 1 fin *@
+
+    @* fila 2 *@
+    <div class="row justify-content-between  mt-3">
+
+        <div class="col-md-12 d-flex align-items-stretch">
+            <div class="card p-4 w-100">
+                <h2 class="tituloCard">Servicios
+                    <strong>programados</strong>
+                </h2>
+                <hr>
+                <div class="listProgram">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Juan Carlos Torres</td>
+                                <td><span><i class="bi bi-calendar3"></i> </span> Lunes 21 Febrero</td>
+                                <td><span><i class="bi bi-alarm"></i></span> 10:00 a. m.</td>
+                                <td> <span><i class="bi bi-hourglass-split"></i></span> Por confirmar</td>
+                                <td>
+                                    <div class="actions">
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-title="Tooltip on top">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-title="Tooltip on top">
+                                            <span class="confirm"><i class="bi bi-check-circle"> </i></span>
+                                        </button>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+
+    </div>
+    @* fin fila 2 *@
+</div>
 

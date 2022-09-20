@@ -40,8 +40,6 @@ namespace CitasChernobyl.Controllers
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
                 #endregion
-
-
                 return RedirectToAction("Index", "Home");
             }
             else

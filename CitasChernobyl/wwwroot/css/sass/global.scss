@@ -11,6 +11,7 @@ $colorBlk1: #191D29;
 /////import font 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 body{
     background: url(../image/bg1.jpg);
@@ -128,4 +129,135 @@ body{
     50%  {transform: translate(2px, 2px);}
     75%  {transform: translate(2px, -2px);}
     100%  {transform: translate(-2px, 2px);}
+}
+
+
+/////////nav
+/// 
+.navBarInner{
+    background-color: $colorwt !important;
+}
+.innerBrand{
+    position: relative;
+
+    & img{
+        width: 80px;
+        position: absolute;
+        left: -12px;
+        top: -12px;
+        background-color: $colorBlk1;
+        padding: 10px;
+        border-radius:0 0 12px 0 ;
+    }
+}
+
+.navList{
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    gap: 60px;
+
+    & a{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+    }
+
+    & .outBtn{
+        align-self: flex-end;
+    }
+}
+
+////
+/// contInner
+.contInner{
+    color: $colorwt;
+}
+
+.colorWt{
+    color: $colorwt;
+    & a{
+        color: $colorG2;
+    }
+}
+
+.footerInner{
+    background-color: $colorBlk1;
+    border: 0px !important;
+    text-align: center;
+    & a{
+        color: $colorG2;
+    }
+}
+
+h1,h3,h4,h5,h6,p{
+    margin-bottom: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.boxDashboard{
+    color: $colorBlk1;
+
+    hr{
+        background-color: $colorBlk1;
+        opacity: 0.1;
+    }
+
+    & .Green{
+        color: $colorG1;
+    }
+    .actualTitle{
+        font-size: 1.4rem;
+        font-weight: 200;
+        letter-spacing: 0.5rem;
+    }
+    & .boxDate{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: 20px;
+        & .day{
+            & h1{
+                font-size: 6.6rem;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                color: $colorG2;
+                margin-bottom: 0;
+            }
+
+        }
+        & .year{
+            & h2{
+                margin-top: 20px;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+            }
+
+            & h3{
+                text-transform: uppercase;
+                font-size: 2.4rem;
+                font-weight: 700;
+                letter-spacing: 8px;
+            }
+        }
+    }
+
+    .tituloCard{
+        & strong{
+            color: $colorG1;
+        }
+    }
+}
+
+.table{
+    & tr{
+        vertical-align: baseline;
+    }
+}
+
+.activo{
+    color:$colorG1;
 }

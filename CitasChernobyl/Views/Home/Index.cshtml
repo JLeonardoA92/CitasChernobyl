@@ -1,8 +1,196 @@
 ﻿@{
     ViewData["Title"] = "Home";
+
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-   
+@if (User.IsInRole("Administrador"))
+{
+    <div class="text-center">
+    <h1 class="display-4">Welcome admin</h1>
+
 </div>
+}
+else if (User.IsInRole("Cliente"))
+{
+    <div class="boxDashboard p-4">
+    @* fila 1 *@
+
+    <div class="row justify-content-between ">
+        <div class="col-md-8 d-flex align-items-stretch">
+            <div class="card p-5 pb-0">
+                <div class="row ">
+                    <div class="col-md-7 pt-3">
+                        <h4>Has hecho un <strong class="Green">72% más de citas hoy.</strong> Solo te falta un poco para
+                            un servicio gratuito.</h4>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="../image/client.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fechaData d-flex align-items-stretch">
+            <div class="card p-4">
+                <h2 class="actualTitle">FECHA ACTUAL </h2>
+                <hr>
+                <div class="boxDate">
+                    <div class="day">
+                        <h1></h1>
+                    </div>
+                    <div class="year">
+                        <h2></h2>
+                        <h3></h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @* final 1 fin *@
+
+    @* fila 2 *@
+    <div class="row justify-content-between  mt-3">
+
+        <div class="col-md-4  d-flex align-items-stretch">
+            <div class="card p-4">
+                <h2 class="tituloCard">Mis citas
+                    <strong>programadas</strong>
+                </h2>
+                <hr>
+                <div class="boxDate">
+                    <div class=" ">
+                        <h1></h1>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @* fin fila 2 *@
+</div>
+}
+else if (User.IsInRole("Empleado"))
+{
+<div class="boxDashboard p-4">
+    @* fila 1 *@
+
+    <div class="row justify-content-between ">
+        <div class="col-md-8 d-flex align-items-stretch">
+            <div class="card p-5 pb-0">
+                <div class="row ">
+                    <div class="col-md-8 pt-3">
+                        <h4>Has hecho un <strong class="Green">72% más de citas hoy.</strong> Solo te falta un poco para
+                            cumplir tu meta.</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../image/men3.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fechaData d-flex align-items-stretch">
+            <div class="card p-4 w-100">
+                <h2 class="actualTitle">FECHA ACTUAL </h2>
+                <hr>
+                <div class="boxDate">
+                    <div class="day">
+                        <h1></h1>
+                    </div>
+                    <div class="year">
+                        <h2></h2>
+                        <h3></h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @* final 1 fin *@
+
+    @* fila 2 *@
+    <div class="row justify-content-between  mt-3">
+
+        <div class="col-md-8 d-flex align-items-stretch">
+            <div class="card p-4 w-100">
+                <h2 class="tituloCard">Servicios
+                    <strong>programados hoy</strong>
+                </h2>
+                <hr>
+                <div class="listProgram">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Juan Carlos Torres</td>
+                                <td><span><i class="bi bi-alarm"></i></span> 10:00 a. m.</td>
+                                <td> <span><i class="bi bi-hourglass-split"></i></span> Por confirmar</td>
+                                <td>
+                                    <div class="actions">
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-title="Tooltip on top">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-title="Tooltip on top">
+                                            <span class="confirm"><i class="bi bi-check-circle"> </i></span>
+                                        </button>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card p-4">
+                <h3 class="tituloCard">Servicios
+                    <strong>para mañana</strong>
+                </h3>
+                <hr>
+                <div class="listProgram">
+                    <table class="table">
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Hora</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span><i class="bi bi-alarm"></i></span> 10:00 a. m.</td>
+                                <td> <span><i class="bi bi-hourglass-split"></i></span> Por confirmar</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    @* fin fila 2 *@
+</div>
+}
